@@ -1,0 +1,49 @@
+.header {
+  background-image: url(/images/photos/header-background-mobile.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  @include onLaptop {
+    background-image: url(/images/photos/header-background.png);
+  };
+
+  &__content {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    height: 100vh;
+    padding: 40px 24px 95px 20px;
+  }
+
+  &__title {
+    font-weight: 800;
+    font-size: 32px;
+    line-height: 32px;
+    letter-spacing: -1.5px;
+    
+    @include onLaptop {
+      font-size: 40px;
+      line-height: 40px;
+      letter-spacing: -1.5px;
+    }
+
+    &::before {
+      content: '';
+      display: block;
+      width: 32px;
+      height: 27px;
+      background-image: url(/images/sound-waves-mobile.svg);
+      margin-bottom: 16px;
+
+      @include onLaptop {
+        width: 65px;
+        height: 75px;
+        background-image: url(/images/sound-waves.svg);
+        margin-bottom: 40px;
+      }
+    }
+  }
+}

@@ -1,0 +1,31 @@
+.page {
+  position: relative;
+  background-color: #E5E5E5;
+
+  &__body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      color: $mainColorBlack;
+
+      &--hidden {
+        overflow: hidden;
+      }
+  }
+
+  &__section {
+    margin-bottom: 120px; 
+  }
+
+  &__menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    transform: translateX(100%);
+    transition: all 0.3s;
+
+    &:target {
+      transform: translateX(0);
+    }
+  }
+}

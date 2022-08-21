@@ -1,0 +1,43 @@
+.icon {
+  margin: 0;
+  $icon-size-mobile: 18px;
+  $icon-size-desktop: 24px;
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  
+  display: inline-block;
+  text-decoration: none;
+  width: $icon-size-mobile;
+  height: $icon-size-mobile;
+
+  @include onLaptop {
+    width: $icon-size-desktop;
+    height: $icon-size-desktop;
+  }
+
+  @include onDesktop {
+    width: $icon-size-desktop;
+    height: $icon-size-desktop;
+  }
+
+
+
+  &--phone {
+    margin-right: 30px;
+    background-image: url(/images/phone-icon.svg);
+
+    @include onLaptop {
+      margin-right: 40px;
+    }
+  }
+
+  &--menu {
+    background-image: url(/images/menu-icon.svg);
+  }
+
+  &--cross {
+    background-image: url(/images/menu-cancel.svg);
+  }
+}

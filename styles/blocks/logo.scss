@@ -1,0 +1,18 @@
+.logo {
+  margin: 0;
+
+  &__image {
+    width: 130px;
+    height: 16px;
+    
+    @include onLaptop {
+      width: 190px;
+      height: 24px;
+    }
+
+    @include onLaptop {
+      width: 190px;
+      height: 24px;
+    }
+  }
+}
